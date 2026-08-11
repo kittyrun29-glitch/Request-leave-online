@@ -1,0 +1,2437 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ระเบียบและขั้นตอนการลางาน | SiamMTK</title>
+
+    <style>
+
+        /* ========================================
+           RESET
+        ======================================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                "Segoe UI",
+                "Tahoma",
+                "Arial",
+                sans-serif;
+
+            background: #f4f7fb;
+            color: #263238;
+            line-height: 1.8;
+        }
+
+
+        /* ========================================
+           HEADER / HERO
+        ======================================== */
+
+        header {
+            position: relative;
+            min-height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 55px 7%;
+            overflow: hidden;
+
+            /* รูปพื้นหลังบริษัท */
+            background-image:
+                linear-gradient(
+                    rgba(0, 55, 105, 0.42),
+                    rgba(0, 55, 105, 0.42)
+                ),
+                url("img01.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            color: #ffffff;
+        }
+
+        /* ชั้นช่วยให้ตัวหนังสืออ่านง่ายบนรูป */
+        header::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(0, 30, 60, 0.30), rgba(0, 30, 60, 0.02));
+            pointer-events: none;
+        }
+
+        header h1,
+        header p {
+            position: relative;
+            z-index: 1;
+            color: #ffffff;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.65);
+        }
+
+        header h1 {
+            font-size: 48px;
+            line-height: 1.25;
+            margin-bottom: 14px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 21px;
+            line-height: 1.55;
+            opacity: 1;
+        }
+
+        .logo {
+            width: 75px;
+            height: 75px;
+
+            background: white;
+            color: #1565c0;
+
+            border-radius: 18px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 0 auto 18px;
+
+            font-size: 25px;
+            font-weight: bold;
+
+            box-shadow:
+                0 8px 20px rgba(0,0,0,0.15);
+        }
+
+
+        /* ========================================
+           NAVIGATION
+        ======================================== */
+
+        .nav {
+            position: sticky;
+            top: 0;
+
+            z-index: 1000;
+
+            background: white;
+
+            border-bottom:
+                1px solid #e0e0e0;
+
+            box-shadow:
+                0 2px 10px rgba(0,0,0,.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 5px;
+
+            padding: 8px 15px;
+
+            overflow-x: auto;
+        }
+
+        .nav a {
+            color: #37474f;
+
+            text-decoration: none;
+
+            padding: 10px 15px;
+
+            border-radius: 8px;
+
+            white-space: nowrap;
+
+            font-size: 14px;
+
+            transition: .2s;
+        }
+
+        .nav a:hover {
+            background: #e3f2fd;
+
+            color: #1565c0;
+        }
+
+
+        /* ========================================
+           MAIN
+        ======================================== */
+
+        .container {
+            max-width: 1100px;
+
+            margin: 40px auto;
+
+            padding: 0 20px;
+        }
+
+
+        /* ========================================
+           SECTION
+        ======================================== */
+
+        section {
+            background: white;
+
+            border-radius: 16px;
+
+            padding: 35px;
+
+            margin-bottom: 25px;
+
+            box-shadow:
+                0 4px 18px rgba(0,0,0,.05);
+
+            scroll-margin-top: 80px;
+        }
+
+        section h2 {
+            color: #0d47a1;
+
+            font-size: 25px;
+
+            margin-bottom: 20px;
+
+            padding-bottom: 12px;
+
+            border-bottom:
+                2px solid #e3f2fd;
+        }
+
+        section h3 {
+            color: #1565c0;
+
+            font-size: 19px;
+
+            margin-bottom: 12px;
+        }
+
+        section h4 {
+            color: #1565c0;
+
+            font-size: 16px;
+
+            margin-top: 20px;
+
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin-bottom: 12px;
+
+            text-align: justify;
+        }
+
+        ul,
+        ol {
+            margin-left: 25px;
+
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+
+        /* ========================================
+           POLICY
+        ======================================== */
+
+        .policy-item {
+            background: #f8fafc;
+
+            border:
+                1px solid #e3e8ef;
+
+            border-radius: 12px;
+
+            padding: 22px;
+
+            margin-bottom: 18px;
+        }
+
+        .policy-item h3 {
+            margin-top: 0;
+
+            color: #0d47a1;
+        }
+
+        .policy-item h4 {
+            color: #1565c0;
+        }
+
+        .policy-highlight {
+            background: #e3f2fd;
+
+            border-left:
+                5px solid #1565c0;
+
+            padding: 15px 18px;
+
+            border-radius: 8px;
+
+            margin: 15px 0;
+        }
+
+        .policy-warning {
+            background: #fff8e1;
+
+            border-left:
+                5px solid #ffb300;
+
+            padding: 15px 18px;
+
+            border-radius: 8px;
+
+            margin: 15px 0;
+        }
+
+        .policy-danger {
+            background: #ffebee;
+
+            border-left:
+                5px solid #e53935;
+
+            padding: 15px 18px;
+
+            border-radius: 8px;
+
+            margin: 15px 0;
+        }
+
+        .sub-number {
+            font-weight: 600;
+
+            color: #1565c0;
+
+            margin-top: 15px;
+        }
+
+
+        /* ========================================
+           TABLE
+        ======================================== */
+
+        .table-wrapper {
+            overflow-x: auto;
+
+            margin: 15px 0;
+        }
+
+        .policy-table {
+            width: 100%;
+
+            min-width: 600px;
+
+            border-collapse: collapse;
+        }
+
+        .policy-table th,
+        .policy-table td {
+            border:
+                1px solid #dfe5eb;
+
+            padding: 12px;
+
+            vertical-align: top;
+        }
+
+        .policy-table th {
+            background: #1565c0;
+
+            color: white;
+
+            text-align: left;
+        }
+
+        .policy-table tr:nth-child(even) td {
+            background: #f8fafc;
+        }
+
+
+        /* ========================================
+           LEAVE TYPE CARDS
+        ======================================== */
+
+        .leave-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 15px;
+        }
+
+        .leave-card {
+            border:
+                1px solid #e0e0e0;
+
+            border-radius: 12px;
+
+            padding: 20px;
+
+            transition: .2s;
+        }
+
+        .leave-card:hover {
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 8px 20px rgba(0,0,0,.08);
+
+            border-color:
+                #90caf9;
+        }
+
+        .leave-code {
+            display: inline-block;
+
+            background: #e3f2fd;
+
+            color: #1565c0;
+
+            padding: 3px 9px;
+
+            border-radius: 6px;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            margin-bottom: 8px;
+        }
+
+
+        /* ========================================
+           STEPS
+        ======================================== */
+
+        .steps {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 15px;
+        }
+
+        .step {
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 15px;
+        }
+
+        .step-number {
+            min-width: 42px;
+
+            height: 42px;
+
+            border-radius: 50%;
+
+            background: #1565c0;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-weight: bold;
+        }
+
+        .step-content {
+            flex: 1;
+
+            background: #f8fafc;
+
+            padding: 14px 18px;
+
+            border-radius: 10px;
+        }
+
+        .step-content strong {
+            color: #0d47a1;
+        }
+
+
+        /* ========================================
+           APPROVAL FLOW
+        ======================================== */
+
+        .approval-flow {
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 10px;
+
+            flex-wrap: wrap;
+
+            margin: 25px 0;
+        }
+
+        .approval-box {
+            background: #e3f2fd;
+
+            border:
+                1px solid #90caf9;
+
+            padding: 15px 20px;
+
+            border-radius: 10px;
+
+            text-align: center;
+
+            min-width: 140px;
+        }
+
+        .approval-box strong {
+            display: block;
+
+            color: #0d47a1;
+        }
+
+        .arrow {
+            font-size: 24px;
+
+            color: #1565c0;
+        }
+
+
+        /* ========================================
+           FAQ
+        ======================================== */
+
+        .faq {
+            border:
+                1px solid #e0e0e0;
+
+            border-radius: 10px;
+
+            margin-bottom: 10px;
+
+            overflow: hidden;
+        }
+
+        .faq button {
+            width: 100%;
+
+            background: white;
+
+            border: none;
+
+            text-align: left;
+
+            padding: 16px 20px;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            color: #263238;
+        }
+
+        .faq button:hover {
+            background: #f5f9ff;
+        }
+
+        .faq-answer {
+            display: none;
+
+            padding: 0 20px 18px;
+
+            color: #546e7a;
+        }
+
+        .faq.active .faq-answer {
+            display: block;
+        }
+
+
+        /* ========================================
+           APPLY
+        ======================================== */
+
+        .apply-area {
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #e3f2fd,
+                    #f5faff
+                );
+        }
+
+        .apply-button {
+            display: inline-block;
+
+            background: #1565c0;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 14px 28px;
+
+            border-radius: 10px;
+
+            font-weight: bold;
+
+            margin-top: 15px;
+
+            transition: .2s;
+        }
+
+        .apply-button:hover {
+            background: #0d47a1;
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        /* ========================================
+           FOOTER
+        ======================================== */
+
+        footer {
+            background: #263238;
+
+            color: #cfd8dc;
+
+            text-align: center;
+
+            padding: 30px 20px;
+
+            margin-top: 50px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+
+        /* ========================================
+           MOBILE / RESPONSIVE
+        ======================================== */
+
+        @media (max-width: 768px) {
+
+            body {
+                font-size: 15px;
+                line-height: 1.6;
+            }
+
+            /* ---------- Header ---------- */
+            header {
+                min-height: 240px;
+                padding: 30px 20px;
+                background-position: center;
+            }
+
+            header h1 {
+                font-size: 28px;
+                line-height: 1.3;
+                margin-bottom: 9px;
+            }
+
+            header p {
+                font-size: 15px;
+                line-height: 1.5;
+            }
+
+            /* ---------- Navigation ---------- */
+            .nav {
+                position: sticky;
+                top: 0;
+            }
+
+            .nav-container {
+                justify-content: flex-start;
+                gap: 2px;
+                padding: 5px 8px;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+
+            .nav-container::-webkit-scrollbar {
+                display: none;
+            }
+
+            .nav a {
+                font-size: 13px;
+                padding: 7px 11px;
+                border-radius: 7px;
+            }
+
+            /* ---------- Container ---------- */
+            .container {
+                width: 100%;
+                margin: 18px auto;
+                padding: 0 10px;
+            }
+
+            /* ---------- Section ---------- */
+            section {
+                padding: 18px 15px;
+                margin-bottom: 14px;
+                border-radius: 12px;
+                scroll-margin-top: 60px;
+            }
+
+            section h2 {
+                font-size: 20px;
+                line-height: 1.4;
+                margin-bottom: 14px;
+                padding-bottom: 8px;
+            }
+
+            section h3 {
+                font-size: 17px;
+                line-height: 1.45;
+                margin-bottom: 8px;
+            }
+
+            section h4 {
+                font-size: 15px;
+                line-height: 1.5;
+                margin-top: 14px;
+                margin-bottom: 6px;
+            }
+
+            /* ---------- Paragraph ---------- */
+            p {
+                margin-bottom: 8px;
+                text-align: left;
+                line-height: 1.65;
+            }
+
+            /* ---------- Lists ---------- */
+            ul, ol {
+                margin-left: 20px;
+                margin-bottom: 8px;
+                padding-left: 5px;
+            }
+
+            li {
+                margin-bottom: 5px;
+                line-height: 1.6;
+            }
+
+            /* ---------- Policy ---------- */
+            .policy-item {
+                padding: 14px;
+                margin-bottom: 12px;
+                border-radius: 10px;
+            }
+
+            .policy-item h3 {
+                margin-bottom: 8px;
+            }
+
+            .policy-highlight,
+            .policy-warning,
+            .policy-danger {
+                padding: 11px 13px;
+                margin: 10px 0;
+                border-radius: 7px;
+                line-height: 1.6;
+            }
+
+            .policy-highlight p,
+            .policy-warning p,
+            .policy-danger p {
+                margin-bottom: 0;
+            }
+
+            /* ---------- Leave Cards ---------- */
+            .leave-grid {
+                grid-template-columns: 1fr;
+                gap: 9px;
+            }
+
+            .leave-card {
+                padding: 13px;
+                border-radius: 9px;
+            }
+
+            .leave-card h3 {
+                margin-bottom: 5px;
+            }
+
+            .leave-card p {
+                margin-bottom: 0;
+            }
+
+            .leave-code {
+                font-size: 11px;
+                padding: 2px 7px;
+                margin-bottom: 5px;
+            }
+
+            /* ---------- Table ---------- */
+            .table-wrapper {
+                margin: 10px -3px;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .policy-table {
+                min-width: 520px;
+                font-size: 13px;
+            }
+
+            .policy-table th,
+            .policy-table td {
+                padding: 8px 9px;
+                line-height: 1.5;
+            }
+
+            /* ---------- Steps ---------- */
+            .steps {
+                gap: 8px;
+            }
+
+            .step {
+                gap: 9px;
+                align-items: flex-start;
+            }
+
+            .step-number {
+                min-width: 32px;
+                width: 32px;
+                height: 32px;
+                font-size: 13px;
+                flex-shrink: 0;
+            }
+
+            .step-content {
+                padding: 9px 11px;
+                border-radius: 8px;
+                line-height: 1.55;
+            }
+
+            .step-content p {
+                margin-bottom: 0;
+            }
+
+            /* ---------- Approval Flow ---------- */
+            .approval-flow {
+                flex-direction: column;
+                gap: 6px;
+                margin: 15px 0;
+            }
+
+            .approval-box {
+                width: 100%;
+                min-width: 0;
+                padding: 10px 12px;
+                font-size: 13px;
+            }
+
+            .approval-box strong {
+                font-size: 14px;
+            }
+
+            .arrow {
+                font-size: 18px;
+                transform: rotate(90deg);
+                line-height: 1;
+            }
+
+            /* ---------- FAQ ---------- */
+            .faq {
+                margin-bottom: 7px;
+                border-radius: 8px;
+            }
+
+            .faq button {
+                padding: 11px 13px;
+                font-size: 14px;
+                line-height: 1.5;
+            }
+
+            .faq-answer {
+                padding: 0 13px 12px;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+
+            /* ---------- Apply ---------- */
+            .apply-area {
+                padding: 22px 15px;
+            }
+
+            .apply-button {
+                width: 100%;
+                padding: 12px 18px;
+                font-size: 15px;
+                border-radius: 9px;
+            }
+
+            /* ---------- Footer ---------- */
+            footer {
+                padding: 22px 15px;
+                font-size: 13px;
+                line-height: 1.6;
+                margin-top: 25px;
+            }
+        }
+
+        /* ========================================
+           SMALL PHONES
+        ======================================== */
+
+        @media (max-width: 480px) {
+
+            header {
+                min-height: 220px;
+                padding: 26px 16px;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            header p {
+                font-size: 14px;
+            }
+
+            section {
+                padding: 16px 13px;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ========================================
+     HEADER
+======================================== -->
+
+<header>
+
+    <h1>
+        ระเบียบและขั้นตอนการลางาน
+    </h1>
+
+    <p>
+        บริษัท สยามเอ็มทีเค จำกัด
+        <br>
+        SiamMTK CO., LTD.
+        <br>
+        ระบบการลาออนไลน์
+    </p>
+
+</header>
+
+
+<!-- ========================================
+     NAVIGATION
+======================================== -->
+
+<nav class="nav">
+
+    <div class="nav-container">
+
+        <a href="#general">
+            ภาพรวม
+        </a>
+
+        <a href="#rules">
+            ระเบียบการลา
+        </a>
+
+        <a href="#types">
+            ประเภทการลา
+        </a>
+
+        <a href="#procedure">
+            ขั้นตอนการลา
+        </a>
+
+        <a href="#approval">
+            การอนุมัติ
+        </a>
+
+        <a href="#documents">
+            เอกสาร
+        </a>
+
+        <a href="#faq">
+            FAQ
+        </a>
+
+        <a href="#apply">
+            ยื่นใบลา
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- ========================================
+     MAIN
+======================================== -->
+
+<main class="container">
+
+
+<!-- ========================================
+     GENERAL
+======================================== -->
+
+<section id="general">
+
+    <h2>
+        📋 ภาพรวมการลางาน
+    </h2>
+
+    <p>
+        บริษัทฯ กำหนดระเบียบและขั้นตอนการลางาน
+        เพื่อให้พนักงานสามารถดำเนินการลาได้อย่างถูกต้อง
+        และเพื่อให้การบริหารจัดการกำลังคน
+        รวมถึงการมอบหมายงานภายในหน่วยงาน
+        เป็นไปอย่างมีประสิทธิภาพ
+    </p>
+
+    <div class="policy-highlight">
+
+        <strong>
+            📌 สิ่งสำคัญ
+        </strong>
+
+        <p>
+            การยื่นใบลาไม่ได้หมายความว่าการลาได้รับการอนุมัติแล้ว
+            พนักงานต้องได้รับการอนุมัติจากผู้มีอำนาจ
+            ตามขั้นตอนที่บริษัทฯ กำหนดก่อนหยุดงาน
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================
+     RULES
+======================================== -->
+
+<section id="rules">
+
+    <h2>
+        📜 ระเบียบการลางาน
+    </h2>
+
+
+    <!-- 1 -->
+
+    <div class="policy-item">
+
+        <h3>
+            1. การลาป่วย
+        </h3>
+
+        <p>
+            พนักงานที่เจ็บป่วยจริงจนไม่สามารถมาปฏิบัติงานได้
+            มีสิทธิขอลาป่วยได้ตามความเป็นจริง
+            โดยได้รับค่าจ้างปีละไม่เกิน 30 วันทำงาน
+        </p>
+
+        <p>
+            พนักงานจะต้องแจ้งให้ผู้บังคับบัญชาทราบ
+            โดยเร็วที่สุดเท่าที่จะทำได้ในวันแรกที่หยุดงาน
+            เพื่อมิให้เกิดปัญหาในการมอบหมายงาน
+            ให้ผู้อื่นปฏิบัติหน้าที่แทน
+        </p>
+
+        <p>
+            พนักงานจะต้องยื่นใบลาป่วย
+            ในวันแรกที่กลับเข้าปฏิบัติงาน
+        </p>
+
+        <div class="policy-highlight">
+
+            <strong>
+                เอกสารประกอบการลา
+            </strong>
+
+            <p>
+                ผู้บังคับบัญชามีสิทธิให้พนักงาน
+                แสดงใบรับรองแพทย์แผนปัจจุบันชั้นหนึ่ง
+                หรือใบรับรองจากสถานพยาบาลของทางราชการ
+                เพื่อประกอบการพิจารณาการลาป่วย
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- 2 -->
+
+    <div class="policy-item">
+
+        <h3>
+            2. การลากิจธุระ
+        </h3>
+
+        <p>
+            พนักงานที่มีกิจธุระส่วนตัว
+            มีสิทธิลากิจได้ปีละไม่เกิน 5 วันทำงาน
+            โดยได้รับค่าจ้าง
+        </p>
+
+        <p>
+            การลากิจจะต้องยื่นลาล่วงหน้าอย่างน้อย 1 วัน
+            และต้องได้รับการอนุมัติจากผู้จัดการฝ่าย
+            ก่อนจึงจะสามารถลากิจได้
+        </p>
+
+        <p>
+            กรณีมีเหตุผลอันสมควรที่ทำให้ไม่สามารถ
+            ยื่นลาล่วงหน้าได้ ให้ติดต่อแจ้งผู้บังคับบัญชา
+            โดยเร็วที่สุด และต้องยื่นใบลาภายในวันแรก
+            ที่กลับเข้าปฏิบัติงาน
+        </p>
+
+        <div class="policy-warning">
+
+            <strong>
+                ⚠️ ข้อควรระวัง
+            </strong>
+
+            <p>
+                หากไม่ปฏิบัติตามขั้นตอนการลา
+                หรือผู้จัดการฝ่ายพิจารณาแล้วไม่อนุมัติ
+                ให้ถือว่าพนักงานขาดงาน
+                และอาจถูกดำเนินการลงโทษทางวินัย
+                ตามระเบียบของบริษัทฯ
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- 3 -->
+
+    <div class="policy-item">
+
+        <h3>
+            3. การลาคลอด
+        </h3>
+
+        <p>
+            พนักงานหญิงที่มีครรภ์ มีสิทธิลาเพื่อคลอดบุตร
+            ก่อนและหลังคลอดครรภ์หนึ่งไม่เกิน 120 วัน
+            โดยรวมวันหยุดที่มีอยู่ในระหว่างวันลาคลอดดังกล่าวด้วย
+        </p>
+
+        <p>
+            พนักงานมีสิทธิได้รับค่าจ้างเท่ากับค่าจ้าง
+            ในวันทำงานปกติตลอดระยะเวลาที่ลา
+            แต่ไม่เกิน 60 วัน
+        </p>
+
+        <p>
+            บริษัทฯ จะจ่ายค่าจ้างภายหลังจากพนักงาน
+            นำใบรับรองแพทย์ ใบรับรองจากสถานพยาบาล
+            ของทางราชการ และใบสูติบัตร
+            มาแสดงเป็นหลักฐานการคลอด
+            ที่ถูกต้องเรียบร้อยแล้ว
+        </p>
+
+        <h4>
+            การลาต่อเนื่องเพื่อเลี้ยงดูบุตร
+        </h4>
+
+        <p>
+            พนักงานหญิงที่ใช้สิทธิลาคลอดบุตร
+            มีสิทธิลาต่อเนื่องเพื่อเลี้ยงดูบุตร
+            ในกรณีที่บุตรมีภาวะเจ็บป่วย
+            ได้อีกไม่เกิน 15 วัน
+        </p>
+
+        <p>
+            มีสิทธิได้รับค่าจ้างในอัตราร้อยละ 50
+            ของค่าจ้าง โดยต้องแสดงใบรับรองแพทย์
+            เพื่อประกอบการลา
+        </p>
+
+        <div class="policy-highlight">
+
+            <strong>
+                หมายเหตุ
+            </strong>
+
+            <p>
+                ตามพระราชบัญญัติคุ้มครองแรงงาน ฉบับที่ 9
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- 4 -->
+
+    <div class="policy-item">
+
+        <h3>
+            4. การลาเพื่อเข้ารับการฝึกอบรมราชการทหาร
+        </h3>
+
+        <p>
+            พนักงานมีสิทธิลาเพื่อเข้ารับราชการทหาร
+            ในการเรียกพลตามกฎหมายว่าด้วยการรับราชการทหาร
+        </p>
+
+        <p>
+            พนักงานมีสิทธิได้รับค่าจ้างเท่ากับค่าจ้าง
+            ในวันทำงานปกติ โดยไม่เกินระยะเวลาที่กำหนด
+            ในหมายเรียก และมีระยะเวลาไม่เกินปีละ 60 วัน
+        </p>
+
+        <p>
+            พนักงานจะต้องยื่นใบลาทันทีที่ได้รับหมายเรียก
+            เพื่อขออนุญาตลาจากผู้บังคับบัญชา
+            และผู้ที่ได้รับมอบหมาย
+        </p>
+
+        <div class="policy-warning">
+
+            <strong>
+                ⚠️ การไม่ปฏิบัติตามระเบียบ
+            </strong>
+
+            <p>
+                หากพนักงานไม่ยื่นใบลาให้ถูกต้องตามระเบียบ
+                จะถือว่าเป็นการขาดงาน
+                และอาจถูกดำเนินการลงโทษทางวินัย
+            </p>
+
+        </div>
+
+        <p>
+            เมื่อพนักงานพ้นจากการรับราชการทหารในการเรียกพลแล้ว
+            ต้องมารายงานตัวและกลับเข้าปฏิบัติงานทันที
+            หากไม่มารายงานตัว ให้ถือว่าพนักงานละทิ้งหน้าที่
+            นับแต่วันที่ได้รับการปลดจากการรับราชการทหาร
+        </p>
+
+    </div>
+
+
+    <!-- 5 -->
+
+    <div class="policy-item">
+
+        <h3>
+            5. การลาเพื่อทำหมัน
+        </h3>
+
+        <p>
+            พนักงานมีสิทธิลาเพื่อทำหมัน
+            และมีสิทธิได้รับค่าจ้างตามระยะเวลาที่
+            แพทย์แผนปัจจุบันชั้นหนึ่งกำหนด
+            และออกใบรับรองแพทย์
+        </p>
+
+        <p>
+            พนักงานจะต้องแจ้งให้ผู้บังคับบัญชาทราบล่วงหน้า
+            ไม่น้อยกว่า 7 วัน และเมื่อได้รับอนุมัติแล้ว
+            จึงจะสามารถลาได้
+        </p>
+
+    </div>
+
+
+    <!-- 6 -->
+
+    <div class="policy-item">
+
+        <h3>
+            6. การลาสวัสดิสงเคราะห์
+        </h3>
+
+        <p>
+            บริษัทฯ จะให้สิทธิพนักงานลาเป็นกรณีพิเศษ
+            โดยได้รับค่าจ้างหรือเงินเดือนตามปกติ
+            และไม่มีผลกระทบต่อการขึ้นเงินเดือนหรือโบนัส
+            ในกรณีดังต่อไปนี้
+        </p>
+
+
+        <h4>
+            6.1 การลามงคลสมรส
+        </h4>
+
+        <p>
+            พนักงานที่ทำงานกับบริษัทฯ ครบ 1 ปี
+            มีสิทธิลาเพื่อพิธีมงคลสมรสได้
+            5 วันทำงาน โดยได้รับค่าจ้าง
+        </p>
+
+        <p>
+            พนักงานจะต้องนำหลักฐานประกอบการลา
+            มาแสดงต่อบริษัทฯ และเมื่อได้รับอนุมัติแล้ว
+            จึงจะสามารถลาได้
+        </p>
+
+
+        <h4>
+            6.2 การลาอุปสมบท
+        </h4>
+
+        <p>
+            พนักงานที่ทำงานกับบริษัทฯ มาแล้วไม่น้อยกว่า 1 ปี
+            มีสิทธิลาอุปสมบทโดยได้รับค่าจ้าง
+            ไม่เกิน 15 วันทำงาน
+        </p>
+
+        <p>
+            บริษัทฯ จะพิจารณาให้ลาเพื่ออุปสมบท
+            ในการขออุปสมบทครั้งแรก และลาได้เพียงครั้งเดียว
+            โดยพิจารณาตามความเหมาะสมเป็นรายกรณี
+        </p>
+
+        <p>
+            พนักงานต้องยื่นขอลาล่วงหน้าอย่างน้อย 30 วัน
+            และต้องนำหนังสือรับรองจากเจ้าอาวาส
+            มาแสดงเป็นหลักฐาน
+        </p>
+
+        <p>
+            หลังจากลาสิกขาบทแล้ว
+            พนักงานจะต้องรายงานตัวและกลับเข้าปฏิบัติงาน
+            ภายใน 3 วัน
+        </p>
+
+
+        <h4>
+            6.3 การลาฌาปนกิจ
+        </h4>
+
+        <p class="sub-number">
+            6.3.1 กรณีบุคคลในครอบครัวโดยชอบด้วยกฎหมาย
+        </p>
+
+        <p>
+            ได้แก่ บิดา มารดา สามี ภรรยา หรือบุตร
+            ถึงแก่กรรม พนักงานมีสิทธิลาเพื่อประกอบพิธีศพ
+            ได้ 5 วันทำงาน โดยได้รับค่าจ้าง
+        </p>
+
+        <p>
+            พนักงานจะต้องนำใบมรณบัตร
+            และเอกสารประกอบมาแสดงเป็นหลักฐาน
+            ประกอบการลา และเมื่อได้รับอนุมัติแล้ว
+            จึงจะสามารถลาได้
+        </p>
+
+
+        <p class="sub-number">
+            6.3.2 กรณีบุคคลในครอบครัวของคู่สมรส
+            รวมทั้งปู่ ย่า ตา ยาย
+        </p>
+
+        <p>
+            กรณีบิดา มารดาของคู่สมรส รวมทั้ง ปู่ ย่า ตา ยาย
+            ของพนักงานถึงแก่กรรม
+            พนักงานมีสิทธิลาเพื่อประกอบพิธีศพ
+            ได้ 3 วันทำงาน โดยได้รับค่าจ้าง
+        </p>
+
+        <p>
+            พนักงานจะต้องนำใบมรณบัตร
+            และเอกสารประกอบมาแสดงเป็นหลักฐาน
+            ประกอบการลา และเมื่อได้รับอนุมัติแล้ว
+            จึงจะสามารถลาได้
+        </p>
+
+
+        <h4>
+            6.4 การลาเนื่องจากภรรยาคลอดบุตร
+        </h4>
+
+        <p>
+            พนักงานมีสิทธิลาเนื่องจากภรรยาตามกฎหมาย
+            คลอดบุตรได้ 15 วันทำงาน โดยได้รับค่าจ้าง
+        </p>
+
+        <p>
+            พนักงานจะต้องนำหลักฐาน ได้แก่
+            ทะเบียนสมรส และสูติบัตรของบุตร
+            มาแสดงเป็นหลักฐานประกอบการลา
+            และเมื่อได้รับอนุมัติแล้วจึงจะสามารถลาได้
+        </p>
+
+        <div class="policy-highlight">
+
+            <strong>
+                หมายเหตุ
+            </strong>
+
+            <p>
+                ตามพระราชบัญญัติคุ้มครองแรงงาน ฉบับที่ 9
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- 7 -->
+
+    <div class="policy-item">
+
+        <h3>
+            7. การลาพักร้อนประจำปี
+        </h3>
+
+        <h4>
+            7.1 สิทธิการลาพักร้อนตามอายุงาน
+        </h4>
+
+        <p>
+            พนักงานที่ทำงานกับบริษัทฯ ครบ 1 ปีขึ้นไป
+            มีสิทธิลาหยุดพักร้อนประจำปี
+            ตามหลักเกณฑ์ดังต่อไปนี้
+        </p>
+
+
+        <div class="table-wrapper">
+
+            <table class="policy-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            อายุงาน
+                        </th>
+
+                        <th>
+                            สิทธิการลาพักร้อน
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            ครบ 1 ปี แต่ยังไม่ครบ 3 ปี
+                        </td>
+
+                        <td>
+                            6 วันทำงาน
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            ครบ 3 ปี แต่ยังไม่ครบ 5 ปี
+                        </td>
+
+                        <td>
+                            8 วันทำงาน
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            ครบ 5 ปีขึ้นไป
+                        </td>
+
+                        <td>
+                            10 วันทำงาน
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <p>
+            บริษัทฯ ขอสงวนสิทธิในการกำหนดวันหยุดพักร้อนประจำปี
+            จำนวนไม่เกิน 2 วันทำงาน ให้พนักงานหยุดพร้อมกัน
+            โดยจะประกาศให้ทราบเป็นรายปี
+        </p>
+
+        <p>
+            พนักงานมีสิทธิสะสมวันหยุดพักร้อนประจำปี
+            ได้ไม่เกิน 15 วันทำงาน
+            โดยรวมวันหยุดพักร้อนประจำปี
+            ที่บริษัทฯ กำหนดด้วย
+        </p>
+
+
+        <h4>
+            7.2 เงื่อนไขการลาพักร้อน
+        </h4>
+
+        <ul>
+
+            <li>
+                กรณีขอลาพักร้อนประจำปีไม่เกิน 2 วัน
+                ต้องยื่นลาล่วงหน้าอย่างน้อยครึ่งวัน
+            </li>
+
+            <li>
+                กรณีขอลาพักร้อนประจำปีตั้งแต่ 3 วันขึ้นไป
+                ต้องยื่นลาล่วงหน้าอย่างน้อย 5 วัน
+            </li>
+
+            <li>
+                กรณีขอลาพักร้อนประจำปีติดต่อกับวันหยุดตามประเพณี
+                ต้องยื่นลาล่วงหน้าอย่างน้อย 5 วัน
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- ========================================
+         GENERAL RULES
+    ======================================== -->
+
+    <div class="policy-item">
+
+        <h3>
+            หลักเกณฑ์การลางาน
+        </h3>
+
+
+        <h4>
+            1. การลาป่วย ลากิจ หรือขาดงานเป็นจำนวนมาก
+        </h4>
+
+        <p>
+            ในกรณีที่พนักงานลาป่วย ลากิจ หรือขาดงาน
+            รวมกันเป็นจำนวนมากภายในรอบ 1 ปี
+            บริษัทฯ มีสิทธิพิจารณาตัดหรืองดโบนัส
+            ตัดหรืองดสิทธิประโยชน์
+            หรือไม่ปรับขึ้นเงินเดือนประจำปี
+            หรือปรับขึ้นในอัตราที่น้อยกว่าสิทธิ
+            ที่พนักงานควรได้รับ
+        </p>
+
+        <p>
+            บริษัทฯ อาจพิจารณาว่าพนักงานเป็นผู้หย่อนสมรรถภาพ
+            ในการทำงาน และอาจพิจารณาเปลี่ยนแปลง
+            ตำแหน่งหน้าที่การงานหรือเลิกจ้าง
+            โดยจ่ายเงินชดเชยตามที่กฎหมายกำหนด
+        </p>
+
+
+        <div class="policy-danger">
+
+            <strong>
+                🚨 การลาที่เป็นเท็จ
+            </strong>
+
+            <p>
+                การลาที่เป็นเท็จถือเป็นความผิดทางวินัยร้ายแรง
+                ต่อบริษัทฯ ในฐานกระทำการทุจริต
+                และจะถูกลงโทษตามระเบียบข้อบังคับของบริษัทฯ
+            </p>
+
+        </div>
+
+
+        <h4>
+            2. การหยุดงานโดยไม่ได้รับอนุญาต
+        </h4>
+
+        <p>
+            การหยุดงานโดยไม่ได้รับอนุญาต
+            หรือการหยุดงานที่ไม่เป็นไปตามระเบียบ
+            หากมีเหตุผลอันสมควรให้ถือว่าเป็นการขาดงาน
+            และหากไม่มีเหตุผลอันสมควร
+            ให้ถือว่าเป็นการละทิ้งหน้าที่การงาน
+        </p>
+
+        <p>
+            ทั้งการขาดงานและการละทิ้งหน้าที่การงาน
+            พนักงานจะไม่ได้รับค่าจ้างในวันที่ขาดงาน
+            หรือวันที่ละทิ้งหน้าที่การงาน
+            และจะต้องถูกดำเนินการลงโทษทางวินัย
+        </p>
+
+        <p>
+            นอกจากนี้ การขาดงานหรือการละทิ้งหน้าที่การงาน
+            อาจมีผลต่อการพิจารณาปรับขึ้นเงินเดือนประจำปี
+            เงินรางวัล หรือเงินตอบแทนอื่น ๆ ของบริษัทฯ
+        </p>
+
+
+        <h4>
+            3. การอนุมัติการลา
+        </h4>
+
+        <p>
+            พนักงานต้องปฏิบัติตามระเบียบการลา
+            และได้รับการอนุมัติเป็นลายลักษณ์อักษร
+            ตามแบบฟอร์มของบริษัทฯ
+        </p>
+
+        <p>
+            ผู้มีอำนาจร่วมกันในการอนุมัติการลา ได้แก่
+            หัวหน้าฝ่าย ผู้จัดการฝ่าย
+            และผู้จัดการฝ่ายบุคคลธุรการ
+            ตามลำดับและหลักเกณฑ์ที่บริษัทฯ กำหนด
+        </p>
+
+
+        <div class="policy-warning">
+
+            <strong>
+                ⚠️ สำคัญ
+            </strong>
+
+            <p>
+                บริษัทฯ จะไม่จ่ายค่าจ้างในกรณีที่พนักงาน
+                ไม่ได้รับการอนุมัติจากผู้มีอำนาจอนุมัติ
+                คนใดคนหนึ่ง และถือว่าเป็นการขาดงาน
+            </p>
+
+        </div>
+
+
+        <h4>
+            4. การลาออก
+        </h4>
+
+        <p>
+            พนักงานจะต้องยื่นใบลาออกล่วงหน้า
+            ไม่น้อยกว่า 30 วัน
+            ก่อนถึงกำหนดวันที่ประสงค์จะลาออก
+        </p>
+
+        <p>
+            พนักงานจะต้องส่งมอบเอกสาร
+            ทรัพย์สิน หรือสิ่งของที่บริษัทฯ
+            มอบหมายหรือมอบให้รับผิดชอบ
+            คืนแก่บริษัทฯ ให้เรียบร้อย
+        </p>
+
+        <p>
+            หากพนักงานฝ่าฝืนระเบียบดังกล่าว
+            และเป็นเหตุให้บริษัทฯ ได้รับความเสียหาย
+            บริษัทฯ อาจดำเนินการตามสิทธิ
+            และกฎหมายที่เกี่ยวข้อง
+            รวมถึงการเรียกร้องค่าเสียหาย
+            ตามที่กฎหมายกำหนด
+        </p>
+
+    </div>
+
+
+</section>
+
+
+<!-- ========================================
+     TYPES
+======================================== -->
+
+<section id="types">
+
+    <h2>
+        📝 ประเภทการลา
+    </h2>
+
+    <div class="leave-grid">
+
+        <div class="leave-card">
+
+            <span class="leave-code">
+                1
+            </span>
+
+            <h3>
+                ลาป่วย
+            </h3>
+
+            <p>
+                ลาป่วยตามความเป็นจริง
+                โดยได้รับค่าจ้างไม่เกิน 30 วันทำงานต่อปี
+            </p>
+
+        </div>
+
+
+        <div class="leave-card">
+
+            <span class="leave-code">
+                2
+            </span>
+
+            <h3>
+                ลากิจธุระ
+            </h3>
+
+            <p>
+                ลากิจธุระส่วนตัวได้ไม่เกิน 5 วันทำงานต่อปี
+                โดยได้รับค่าจ้าง
+            </p>
+
+        </div>
+
+
+        <div class="leave-card">
+
+            <span class="leave-code">
+                3
+            </span>
+
+            <h3>
+                ลาคลอด
+            </h3>
+
+            <p>
+                ลาคลอดตามสิทธิและหลักเกณฑ์ของบริษัทฯ
+            </p>
+
+        </div>
+
+
+        <div class="leave-card">
+
+            <span class="leave-code">
+                4
+            </span>
+
+            <h3>
+                ลาราชการทหาร
+            </h3>
+
+            <p>
+                ลาเพื่อเข้ารับราชการทหารในการเรียกพล
+            </p>
+
+        </div>
+
+
+        <div class="leave-card">
+
+            <span class="leave-code">
+                5
+            </span>
+
+            <h3>
+                ลาทำหมัน
+            </h3>
+
+            <p>
+                ลาเพื่อทำหมันตามระยะเวลาที่แพทย์กำหนด
+            </p>
+
+        </div>
+
+
+        <div class="leave-card">
+
+            <span class="leave-code">
+                6
+            </span>
+
+            <h3>
+                ลาสวัสดิสงเคราะห์
+            </h3>
+
+            <p>
+                ลามงคลสมรส ลาอุปสมบท ลาฌาปนกิจ
+                และลาเนื่องจากภรรยาคลอดบุตร
+            </p>
+
+        </div>
+
+
+        <div class="leave-card">
+
+            <span class="leave-code">
+                7
+            </span>
+
+            <h3>
+                ลาพักร้อนประจำปี
+            </h3>
+
+            <p>
+                ใช้สิทธิ์ตามอายุงานและเงื่อนไข
+                ที่บริษัทฯ กำหนด
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================
+     PROCEDURE
+======================================== -->
+
+<section id="procedure">
+
+    <h2>
+        🔄 ขั้นตอนการลางานออนไลน์
+    </h2>
+
+    <div class="steps">
+
+
+        <div class="step">
+
+            <div class="step-number">
+                1
+            </div>
+
+            <div class="step-content">
+
+                <strong>
+                    เข้าสู่แบบฟอร์มการลา
+                </strong>
+
+                <p>
+                    เปิดแบบฟอร์มการลาออนไลน์ของบริษัทฯ
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                2
+            </div>
+
+            <div class="step-content">
+
+                <strong>
+                    กรอกข้อมูลพนักงาน
+                </strong>
+
+                <p>
+                    กรอกชื่อ นามสกุล รหัสพนักงาน
+                    แผนก และข้อมูลที่ระบบกำหนด
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                3
+            </div>
+
+            <div class="step-content">
+
+                <strong>
+                    ระบุรายละเอียดการลา
+                </strong>
+
+                <p>
+                    ระบุประเภทการลา วันที่ลา
+                    ช่วงเวลาที่ลา และเหตุผลการลา
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                4
+            </div>
+
+            <div class="step-content">
+
+                <strong>
+                    แนบเอกสาร
+                </strong>
+
+                <p>
+                    แนบเอกสารประกอบการลา
+                    หากประเภทการลานั้นกำหนดให้ต้องมีเอกสาร
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                5
+            </div>
+
+            <div class="step-content">
+
+                <strong>
+                    ตรวจสอบและส่งคำขอ
+                </strong>
+
+                <p>
+                    ตรวจสอบข้อมูลให้ถูกต้อง
+                    แล้วกดส่งแบบฟอร์ม
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                6
+            </div>
+
+            <div class="step-content">
+
+                <strong>
+                    รอการอนุมัติ
+                </strong>
+
+                <p>
+                    ระบบจะส่งคำขอไปยังผู้มีอำนาจ
+                    ตามลำดับการอนุมัติ
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                7
+            </div>
+
+            <div class="step-content">
+
+                <strong>
+                    รับผลการอนุมัติ
+                </strong>
+
+                <p>
+                    ระบบจะแจ้งผลการอนุมัติ
+                    ให้พนักงานทราบ
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================
+     APPROVAL
+======================================== -->
+
+<section id="approval">
+
+    <h2>
+        👨‍💼 ขั้นตอนการอนุมัติ
+    </h2>
+
+    <p>
+        หลังจากพนักงานส่งคำขอลา
+        ระบบจะดำเนินการส่งคำขอไปยังผู้มีอำนาจอนุมัติ
+        ตามลำดับที่บริษัทฯ กำหนด
+    </p>
+
+
+    <div class="approval-flow">
+
+        <div class="approval-box">
+
+            👤
+
+            <strong>
+                พนักงาน
+            </strong>
+
+            ยื่นใบลา
+
+        </div>
+
+
+        <div class="arrow">
+            →
+        </div>
+
+
+        <div class="approval-box">
+
+            👨‍💼
+
+            <strong>
+                หัวหน้าฝ่าย
+            </strong>
+
+            ตรวจสอบ
+
+        </div>
+
+
+        <div class="arrow">
+            →
+        </div>
+
+
+        <div class="approval-box">
+
+            👨‍💼
+
+            <strong>
+                ผู้จัดการฝ่าย
+            </strong>
+
+            พิจารณา
+
+        </div>
+
+
+        <div class="arrow">
+            →
+        </div>
+
+
+        <div class="approval-box">
+
+            🏢
+
+            <strong>
+                ฝ่ายบุคคลธุรการ
+            </strong>
+
+            ดำเนินการ
+
+        </div>
+
+    </div>
+
+
+    <div class="policy-highlight">
+
+        <strong>
+            ✅ เมื่อได้รับอนุมัติ
+        </strong>
+
+        <p>
+            ระบบจะบันทึกผลการอนุมัติ
+            และแจ้งสถานะให้พนักงานทราบ
+        </p>
+
+    </div>
+
+
+    <div class="policy-danger">
+
+        <strong>
+            ❌ กรณีไม่อนุมัติ
+        </strong>
+
+        <p>
+            หากคำขอไม่ผ่านการอนุมัติ
+            ระบบจะแจ้งผลให้พนักงานทราบ
+            และการลาจะไม่ถือว่าได้รับอนุญาต
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================
+     DOCUMENTS
+======================================== -->
+
+<section id="documents">
+
+    <h2>
+        📎 เอกสารประกอบการลา
+    </h2>
+
+    <div class="table-wrapper">
+
+        <table class="policy-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        ประเภทการลา
+                    </th>
+
+                    <th>
+                        เอกสารประกอบ
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                <tr>
+
+                    <td>
+                        ลาป่วย
+                    </td>
+
+                    <td>
+                        ใบรับรองแพทย์
+                        กรณีผู้บังคับบัญชาร้องขอ
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        ลากิจธุระ
+                    </td>
+
+                    <td>
+                        หลักฐานประกอบการลา
+                        ตามความเหมาะสม
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        ลาคลอด
+                    </td>
+
+                    <td>
+                        ใบรับรองแพทย์,
+                        ใบรับรองสถานพยาบาลราชการ,
+                        สูติบัตร
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        ลาราชการทหาร
+                    </td>
+
+                    <td>
+                        หมายเรียก
+                        และเอกสารที่เกี่ยวข้อง
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        ลาทำหมัน
+                    </td>
+
+                    <td>
+                        ใบรับรองแพทย์
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        ลามงคลสมรส
+                    </td>
+
+                    <td>
+                        หลักฐานประกอบการลา
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        ลาอุปสมบท
+                    </td>
+
+                    <td>
+                        หนังสือรับรองจากเจ้าอาวาส
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        ลาฌาปนกิจ
+                    </td>
+
+                    <td>
+                        ใบมรณบัตรและเอกสารประกอบ
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        ลาเนื่องจากภรรยาคลอดบุตร
+                    </td>
+
+                    <td>
+                        ทะเบียนสมรสและสูติบัตรของบุตร
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================
+     FAQ
+======================================== -->
+
+<section id="faq">
+
+    <h2>
+        ❓ คำถามที่พบบ่อย
+    </h2>
+
+
+    <div class="faq">
+
+        <button onclick="toggleFAQ(this)">
+            ต้องยื่นใบลาล่วงหน้าหรือไม่?
+        </button>
+
+        <div class="faq-answer">
+
+            ขึ้นอยู่กับประเภทการลา
+            พนักงานควรตรวจสอบเงื่อนไขของการลาแต่ละประเภท
+            ก่อนยื่นคำขอ
+
+        </div>
+
+    </div>
+
+
+    <div class="faq">
+
+        <button onclick="toggleFAQ(this)">
+            หากลาป่วยกะทันหันต้องทำอย่างไร?
+        </button>
+
+        <div class="faq-answer">
+
+            ให้แจ้งผู้บังคับบัญชาโดยเร็วที่สุด
+            ในวันแรกที่หยุดงาน และยื่นใบลาป่วย
+            ในวันแรกที่กลับเข้าปฏิบัติงาน
+
+        </div>
+
+    </div>
+
+
+    <div class="faq">
+
+        <button onclick="toggleFAQ(this)">
+            ยื่นใบลาแล้วสามารถหยุดได้เลยหรือไม่?
+        </button>
+
+        <div class="faq-answer">
+
+            ไม่ได้ การยื่นใบลาเป็นเพียงการส่งคำขอ
+            พนักงานต้องได้รับการอนุมัติจากผู้มีอำนาจ
+            ก่อนจึงจะถือว่าได้รับอนุญาตให้ลา
+
+        </div>
+
+    </div>
+
+
+    <div class="faq">
+
+        <button onclick="toggleFAQ(this)">
+            ถ้าใบลาถูกปฏิเสธต้องทำอย่างไร?
+        </button>
+
+        <div class="faq-answer">
+
+            ตรวจสอบเหตุผลของการไม่อนุมัติ
+            และติดต่อผู้บังคับบัญชาหรือฝ่ายบุคคล
+            เพื่อสอบถามแนวทางดำเนินการ
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================
+     APPLY
+======================================== -->
+
+<section id="apply" class="apply-area">
+
+    <h2>
+        📝 ยื่นใบลาออนไลน์
+    </h2>
+
+    <p>
+        ตรวจสอบระเบียบและเงื่อนไขการลาเรียบร้อยแล้ว
+        สามารถเข้าสู่แบบฟอร์มเพื่อยื่นใบลาออนไลน์
+    </p>
+
+
+    <!-- ====================================
+         เปลี่ยนลิงก์ตรงนี้
+    ===================================== -->
+
+    <a
+        class="apply-button"
+        href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=kHCfcPkSkka0kl98DTvi5PWznn8490NFqJguQVxFkcRURE03V1M3SlRRUkQ0TkJRQ1M4U1RSMVJQQS4u"
+        target="_blank">
+
+        🚀 ยื่นใบลาออนไลน์
+
+    </a>
+
+</section>
+
+
+</main>
+
+
+<!-- ========================================
+     FOOTER
+======================================== -->
+
+<footer>
+
+    <strong>
+        SiamMTK CO., LTD.
+    </strong>
+
+    <br>
+
+    ระบบการลาออนไลน์
+
+    <br><br>
+
+    <small>
+        หากมีข้อสงสัยเกี่ยวกับระเบียบการลา
+        กรุณาติดต่อฝ่ายบุคคล
+    </small>
+
+</footer>
+
+
+<!-- ========================================
+     JAVASCRIPT
+======================================== -->
+
+<script>
+
+function toggleFAQ(button) {
+
+    const faq =
+        button.parentElement;
+
+    faq.classList.toggle("active");
+
+}
+
+</script>
+
+
+</body>
+</html>
